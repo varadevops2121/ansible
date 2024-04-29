@@ -1,0 +1,14 @@
+- name: install and run inginex
+  hosts: web
+  become: yes #equal to -b in adhoc commands, getting root access
+  tasks:
+  - name: install inginex
+    ansible.builtin.dnf:
+      name: inginex
+      state: latest
+  - name: start inginex
+    ansible.builtin.service:
+      name: inginex
+      state: started
+      enabled: yes
+
