@@ -5,9 +5,9 @@
     ansible.builtin.debug:
      msg: "Hello {{Course | default ('Ansible') }}"
 
-     
+
 - name: uppre case # if we chang a number in upper case
-  hosts: local hosts
+  hosts: localhost
   vars: 
     greeting: "Hello, Good Morning"
   tasks: 
