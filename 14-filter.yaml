@@ -4,11 +4,13 @@
   - name: print default value 
     ansible.builtin.debug:
      msg: "Hello {{Course | default ('Ansible') }}"
+
+     
 - name: uppre case # if we chang a number in upper case
   hosts: local hosts
   vars: 
     greeting: "Hello, Good Morning"
   tasks: 
   - name: convert  into uppercase
-  ansible.builtin.debug:
+    ansible.builtin.debug:
       msg: "{{ greeting | upper }}"
